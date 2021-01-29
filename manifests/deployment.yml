@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: aamirnaveedpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aamirnaveedpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: aamirnaveedpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: aamirnaveedpipelinesjavascriptdocker 
+          image: aamirnaveed0.azurecr.io/aamirnaveedpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
